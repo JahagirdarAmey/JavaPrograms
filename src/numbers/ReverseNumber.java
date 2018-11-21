@@ -21,6 +21,15 @@ public class ReverseNumber {
     }
 
     private static int reverseNumber(int number) {
-        return 0;
+
+        int reverse = 0, reminder=0;
+
+        while(number>0){
+            reminder = number%10;
+            number = number / 10;
+            reverse = reverse*10+reminder;
+        }
+
+        return reverse;
     }
 }
